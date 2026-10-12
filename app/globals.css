@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Google Sans', 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-futura: 'Futura', 'Jost', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Space Mono', monospace;
+  --bg-color: #F6F5F2; /* Blanc cassé architectural 3XN */
+  --text-primary: #1C1C1E; /* Gris foncé principal */
+  --text-secondary: #6E6E73; /* Gris moyen */
+  --text-light: #9E9EA4; /* Gris clair */
+  --border-line: #E5E3DC; /* Filets hairlines */
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: #F6F5F2;
+  color: #1C1C1E;
+}
+
+/* Texture de Bruit SVG discrète */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+}
+
+/* Typographie Sans-Serif & Futura pure */
+.font-futura {
+  font-family: var(--font-futura);
+}
+
+.font-mono-data {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+/* Animations 3XN - Transition soyeuse et fluide (Flow) */
+.transition-flow {
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-zoom-flow {
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-zoom-flow:hover {
+  transform: scale(1.03);
+}
+
+.btn-minimal {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-minimal:hover {
+  background-color: #1C1C1E;
+  color: #F6F5F2;
+}
+
+/* Ligne hairline 3XN */
+.hairline-b {
+  border-bottom: 1px solid var(--border-line);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--border-line);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--border-line);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--border-line);
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F5F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D0CA;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9E9EA4;
+}
+
+::selection {
+  background-color: #1C1C1E;
+  color: #F6F5F2;
+}
